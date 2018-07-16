@@ -8,22 +8,18 @@
   width: 100vw;
   position: absolute;
   margin-top: -9px;
-  margin-left: -8px;
-  
-}
+  margin-left: -8px; }
 
 body {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .title {
-  color:#86c232;
+  color: #86c232;
   font-size: 85px;
   margin-left: 33%;
   margin-top: 10rem;
   position: absolute;
-  font-family: 'Syncopate', sans-serif;
-}
+  font-family: 'Syncopate', sans-serif; }
 
 .login {
   color: #86c232;
@@ -32,29 +28,24 @@ body {
   margin-left: 42%;
   position: absolute;
   font-family: 'Syncopate', sans-serif;
-  border-bottom: 1px solid white;
-}
+  border-bottom: 1px solid white; }
 
 input {
   height: 20px;
-  width: 12rem;
-}
+  width: 12rem; }
 
 label {
   font-size: 18px;
-  color: #86c232;
-}
+  color: #86c232; }
 
 .login-info {
   display: flex;
   flex-direction: column;
   margin-left: 42%;
-  margin-top: 28%;
-}
+  margin-top: 28%; }
 
 .login-info label {
-  padding-bottom: 2px;
-}
+  padding-bottom: 2px; }
 
 .login-btn {
   border-radius: 20px;
@@ -65,8 +56,7 @@ label {
   font-family: 'Syncopate', sans-serif;
   font-size: 10px;
   background-color: #3c3b52;
-  border-color: #86c232;
-}
+  border-color: #86c232; }
 
 .sign-up {
   color: #86c232;
@@ -74,8 +64,7 @@ label {
   position: absolute;
   margin-top: 1rem;
   margin-left: 90%;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .welcome {
   position: absolute;
@@ -83,44 +72,36 @@ label {
   margin-top: 20%;
   margin-left: 39%;
   color: #86c232;
-  font-family: 'Syncopate', sans-serif;
-}
+  font-family: 'Syncopate', sans-serif; }
 
 #username {
   font-family: 'Syncopate', sans-serif;
-  font-size: 11px;
-}
+  font-size: 11px; }
 
 #password {
   font-family: 'Syncopate', sans-serif;
-  font-size: 11px;
-}
+  font-size: 11px; }
 
 @media (max-width: 400px) {
   .title {
     font-size: 45px;
-    margin-left: 4.5rem;
-  }
+    margin-left: 4.5rem; }
   .sign-up {
     margin-left: 10rem;
     font-size: 16px;
-    margin-top: 3rem;
-  }
+    margin-top: 3rem; }
   .login-info {
     margin-top: 20rem;
-    margin-left: 6rem;
-  }
+    margin-left: 6rem; }
   .login {
     font-size: 16px;
     margin-top: 18rem;
-    margin-left: 6rem;
-  }
+    margin-left: 6rem; }
   .login-btn {
-    margin-left: 8rem;
-  }
+    margin-left: 8rem; }
   .welcome {
     font-size: 14px;
     margin-top: 15rem;
-    margin-left: 6rem;
-  }
-}
+    margin-left: 6rem; } }
+
+/*# sourceMappingURL=style.css.map */

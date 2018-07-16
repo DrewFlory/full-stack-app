@@ -2,11 +2,11 @@
 
 <h1 class="title">QuickFit</h1>
 
-<h2 class="login">Login</h2>
+<h3 class="welcome">Welcome New User</h3>
 
-<a href="/signup" class="sign-up">Sign Up</a>
+<h2 class="login">Sign Up</h2>
 
-<form action="/login" method="post">
+<form action="/signup" method="post">
 
     <div class="login-info">
     
@@ -22,12 +22,15 @@
 
     </div>
 
-    <button class="login-btn">LOGIN</button>
+    <button class="login-btn">Sign Up</button>
 
     
 
 </form>
 
+{{#if errorMessage}}
+<div>{{errorMessage}}</div>
+{{/if}}
 
 
 </div>
