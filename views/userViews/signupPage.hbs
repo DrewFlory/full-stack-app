@@ -6,17 +6,24 @@
 
 <h2 class="login">Sign Up</h2>
 
+<a href="/" class="sign-up">Login</a> 
+
 <form action="/signup" method="post">
 
     <div class="login-info">
-    
+        
+        <label id="name" for="">Name</label>
+        <input type="text" name="name">
+        <br>
+        <br>
+
         <label id="username" for="">Username</label>
         <input type="text" name="username">
         <br>
         <br>
 
         <label id="password"for="">Password</label>
-        <input type="text" name="password">
+        <input type="password" name="password">
         <br>
         <br>
 
@@ -29,7 +36,7 @@
 </form>
 
 {{#if errorMessage}}
-<div>{{errorMessage}}</div>
+<div class="error">{{errorMessage}}</div>
 {{/if}}
 
 

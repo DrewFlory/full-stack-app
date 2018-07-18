@@ -4,8 +4,11 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema ({
     username: { type: String, required: true },
     password: { type: String, required: true },
-    img: { type: String, default: '/images/default-img.png' },
+    name: { type: String },
+    img: { type: String, default: '/images/Default-Img.png' },
     favorites: [String], 
+    quote: String,
+    routine: {type: Schema.Types.ObjectId, ref: "Routine"}
 })
 
 const User = mongoose.model("User", userSchema)
