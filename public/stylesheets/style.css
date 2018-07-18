@@ -108,6 +108,10 @@ label {
   font-family: 'Syncopate', sans-serif;
   font-size: 11px; }
 
+#photo {
+  font-family: 'Syncopate', sans-serif;
+  font-size: 11px; }
+
 nav {
   display: flex;
   flex-direction: row;
@@ -123,9 +127,9 @@ nav {
 
 .quote {
   color: #86c232;
-  font-size: 32px;
+  font-size: 29px;
   position: absolute;
-  font-family: 'IM Fell French Canon SC', serif;
+  font-family: 'Trade Winds', cursive;
   width: 22rem;
   text-align: center;
   margin-top: 8rem;
@@ -144,31 +148,31 @@ a {
   margin-top: 0.8rem;
   font-family: 'Rajdhani', sans-serif; }
 
-.profile-info {
+.profile-img {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 10rem;
-  margin-top: 12rem;
-  margin-left: 8rem; }
+  align-items: center; }
 
 .profile-img img {
-  height: 10rem;
-  margin-top: -10rem;
-  margin-left: -8.3rem;
-  position: absolute; }
+  max-height: 15rem;
+  max-width: 14rem;
+  border-radius: 60px;
+  margin-top: 1rem;
+  margin-left: 3rem; }
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .profile-username {
-  margin-top: -2rem;
+  margin-top: 10rem;
   position: absolute;
   font-size: 24px;
-  margin-right: 2rem;
   font-family: 'Rajdhani', sans-serif; }
 
 .profile-name {
   font-size: 11px;
-  margin-top: 1.5rem;
-  margin-left: 4px;
+  margin-top: 14rem;
   position: absolute;
   font-family: 'Rajdhani', sans-serif; }
 
@@ -190,7 +194,6 @@ a {
 .routine-white-background {
   background-color: white;
   opacity: 0.4;
-  text-align: center;
   height: 25rem;
   position: absolute;
   width: 50rem;
@@ -199,12 +202,12 @@ a {
   border-radius: 10px; }
 
 .white-background {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
   height: 42rem;
   width: 20rem;
   position: absolute;
-  background-color: white;
-  opacity: 0.4;
+  background-color: rgba(255, 255, 255, 0.4);
   margin-top: 7rem;
   margin-left: 4rem;
   border-radius: 10px; }
@@ -311,11 +314,19 @@ a.previous {
   width: 10rem;
   margin-left: -30rem; }
 
+.show-img1 img {
+  border-radius: 15%;
+  border: 1px solid #86c232; }
+
 .show-img2 {
   height: 8rem;
   width: 10rem;
   margin-left: 10rem;
   margin-top: -8rem; }
+
+.show-img2 img {
+  border-radius: 15%;
+  border: 1px solid #86c232; }
 
 .show-description {
   color: #86c232;
@@ -325,14 +336,15 @@ a.previous {
   width: 40rem; }
 
 .back {
-  color: #86c232;
+  color: white;
   font-family: 'Rajdhani', sans-serif;
   position: absolute;
-  padding: 2px;
+  padding: 6px;
   margin-top: 8rem;
   margin-left: 42rem;
   font-size: 22px;
-  border: 1px solid white; }
+  border: 1px solid #86c232;
+  border-radius: 10px; }
 
 .routine-form {
   display: flex;
@@ -344,14 +356,18 @@ a.previous {
 
 .routine-form h2 {
   color: #86c232;
-  font-size: 30px; }
+  font-size: 35px;
+  font-family: 'Rajdhani', sans-serif; }
 
 .routine-form input {
   margin-left: 19rem;
-  border-color: #86c232; }
+  border-color: #86c232;
+  font-size: 16px;
+  color: black; }
 
 .routine-form label {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-family: 'Rajdhani', sans-serif; }
 
 .routine-form textarea {
   margin-left: 10rem;
@@ -367,6 +383,10 @@ a.previous {
   border-color: #86c232;
   color: #86c232;
   font-family: 'Syncopate', sans-serif; }
+
+#text {
+  color: black;
+  font-size: 16px; }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .title {

@@ -5,6 +5,8 @@ const Quote        = require('../models/quoteModel');
 const bcrypt      = require('bcryptjs');
 const ensureLogin = require('connect-ensure-login');
 const passport    = require('passport');
+const multer      = require('multer');
+const uploadCloud = require('../config/cloudinary');
 
 
 userRouter.get('/mypage', (req, res, next)=>{
@@ -24,14 +26,16 @@ userRouter.get('/mypage', (req, res, next)=>{
    })
 })
 
-userRouter.get('/users/signup', (req, res, next)=>{
+userRouter.get('/users/signup',  (req, res, next)=>{
     res.render('userViews/signupPage');
 })
 
-userRouter.post('/signup', (req, res, next)=>{
+userRouter.post('/signup', uploadCloud.single('photo'), (req, res, next)=>{
+    console.log(req.file);
     const thePassword = req.body.password;
     const theUsername = req.body.username;
     const theName     = req.body.name;
+    const theImage    = req.file.url;
 
 
     
@@ -50,7 +54,7 @@ userRouter.post('/signup', (req, res, next)=>{
     const salt = bcrypt.genSaltSync(10);
     const hashedPassword = bcrypt.hashSync(thePassword, salt);
 
-    User.create({username: theUsername, password: hashedPassword, name: theName})
+    User.create({username: theUsername, password: hashedPassword, name: theName, img: theImage})
     .then((response)=>{
         console.log("blah: ", response)
         res.redirect('/');

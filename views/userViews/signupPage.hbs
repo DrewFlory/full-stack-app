@@ -8,7 +8,7 @@
 
 <a href="/" class="sign-up">Login</a> 
 
-<form action="/signup" method="post">
+<form action="/signup" method="post" enctype="multipart/form-data">
 
     <div class="login-info">
         
@@ -22,8 +22,14 @@
         <br>
         <br>
 
-        <label id="password"for="">Password</label>
+        <label id="password" for="">Password</label>
         <input type="password" name="password">
+        <br>
+        <br>
+
+        <label id="photo" for="">Upload Profile Image</label>
+        <br>
+        <input type="file" name="photo">
         <br>
         <br>
 
