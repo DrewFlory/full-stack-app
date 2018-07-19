@@ -9,30 +9,27 @@ routineRouter.get('/myroutine', (req, res, next)=>{
     res.render('userViews/routinePage', {theUser: req.user})
 })
 
-routineRouter.get('/mypage/myroutine/:id/new', (req, res, next)=>{
-    Routine.findById(req.params.id)
-    .then((theRoutine)=>{
-        res.render('userViews/profilePage')
-    })
-})
+// routineRouter.post('myroutine/create', (req, res, next)=>{
+//     User.find({$push: {routine: req.body}})
+//     .then((theRoutine)=>{
+//         res.redirect('/userViews/profilePage', {theRoutine: theRoutine})
+//     })
+// })
 
-routineRouter.post('/mypage/myroutine/create',ensureLogin.ensureLoggedIn('/'), (req, res, next)=>{
-    const entireRoutine= {};
-    entireRoutine.workout = req.body.Workout;
-    entireRoutine.weigth = req.body.Weight;
-    entireRoutine.reps = req.body.Reps;
-    entireRoutine.sets = req.body.Sets;
+// routineRouter.post('/mypage/myroutine/create',ensureLogin.ensureLoggedIn('/'), (req, res, next)=>{
+//     User.find({$push: {routine: req.body}})
+//     .populate("routine");
+
  
+//     Routine.findByIdAndUpdate(req.params.id, {$push: {routines: entireRoutine}})
+//     .then((response)=>{
+//         res.redirect(`/mypage/${req.params.id}`)
  
-    Routine.findByIdAndUpdate(req.params.id, {$push: {routines: entireRoutine}})
-    .then((response)=>{
-        res.redirect(`/mypage/${req.params.id}`)
- 
-    })
-    .catch((err)=>{
-        next(err);
-    });
- });
+//     })
+//     .catch((err)=>{
+//         next(err);
+//     });
+// //  });
 
 
 
