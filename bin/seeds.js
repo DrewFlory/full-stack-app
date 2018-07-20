@@ -523,14 +523,6 @@ const exercises = [
 
 ]
 
-Exercise.create(exercises)
-.then((response)=>{
-    console.log(`created ${response.length} exercises`)
-})
-.catch((err)=>{
-    console.log(err)
-})
-
 const quotes = [
     {
         quote: '“ Of course it’s hard. It’s supposed to be hard. It it were easy, everybody would do it. Hard is what makes it great. ”'
