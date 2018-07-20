@@ -547,7 +547,6 @@ const exercises = [
     image2:'/images/exercises/low-back2.jpg',
 },
 
-
 ]
 
 const quotes = [
