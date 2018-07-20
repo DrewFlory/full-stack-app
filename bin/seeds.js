@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Exercise = require('../models/exerciseModel');
-// const Quote = require('../models/quoteModel');
+const Quote = require('../models/quoteModel');
 
 // const dbName = 'starter-code';
 mongoose.connect(process.env.MONGODB_URI);
@@ -685,7 +685,7 @@ const quotes = [
 Quote.create(quotes)
 .then((response)=>{
     Exercise.create(exercises)
-    console.log(`created ${response.length} quotes`)
+    
 })
 .catch((err)=>{
     console.log(err)
