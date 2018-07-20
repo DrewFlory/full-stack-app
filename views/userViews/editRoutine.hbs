@@ -12,29 +12,29 @@
 
     <iframe src="https://giphy.com/embed/rNYfHdUbI08oM" width="360" height="220" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/gym-buddy-matt01ss-rNYfHdUbI08oM"></a></p>
     <iframe src="https://giphy.com/embed/z5cszHTDvXm92" width="360" height="220" frameBorder="0" class="giphy-embed-1" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/gym-soon-z5cszHTDvXm92"></a></p>
-    <form action="/myroutine/create" method="post">
+    
+    <form action="/routines/{{theRoutine._id}}/update" method="post">
         <div class="routine-form">
-            <h2>{{theUser.name}}'s Workout Routine</h2>
+            <h2>{{theRoutine.Userid.name}}'s Workout Routine</h2>
             
-            
-            <label for="">Workout</label>
-            <input name="workout" type="text">
+            <label>Workout</label>
+            <input value="{{theRoutine.Workout}}" name="workout" type="text">
             <br>
             
-            <label for="">Weight</label>
-            <input name="weight" type="number">
+            <label>Weight</label>
+            <input value="{{theRoutine.Weight}}" name="weight" type="number">
             <br>
 
-            <label for="">Sets</label>
-            <input name="sets" type="number">
+            <label>Sets</label>
+            <input value="{{theRoutine.Sets}}" name="sets" type="number">
             <br>
            
-            <label for="">Reps</label>
-            <input name="reps" type="number">
+            <label>Reps</label>
+            <input value="{{theRoutine.Reps}}" name="reps" type="number">
             <br>
             
             <label>More Details</label>
-            <textarea name="details" id="text" cols="30" rows="10"></textarea>
+            <textarea name="details" id="text" cols="30" rows="10">{{theRoutine.Details}}</textarea>
             <br>
             
             <button type="submit" class="add-btn">Add</button>

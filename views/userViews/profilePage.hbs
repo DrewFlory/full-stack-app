@@ -15,17 +15,22 @@
     </div>
 
     <div class="white-background">
-            <div class="profile-img">
-                <img src="{{theUser.img}}" alt="">
+        <div class="profile-img">
+            <img src="{{theUser.img}}" alt="">
+        </div>
+        <div class="user-name">
+            <div class="profile-username">
+                <h2>{{theUser.username}}</h2>
             </div>
-            <div class="user-name">
-                <div class="profile-username">
-                    <h2>{{theUser.username}}</h2>
-                </div>
-                <div class="profile-name">
-                    <h2>{{theUser.name}}</h2>
+            <div class="profile-name">
+                <h2>{{theUser.name}}</h2>
             </div>
-            </div>
+        </div>
+        <div class="quick-lines">
+            <p class="better">Let's Get Better</p>
+            <p class="stronger">Let's Get Stronger</p>
+            <p class="motivated">Let's Get Motivated</p>
+        </div>
     </div>
 
     <div class="quote">
@@ -35,11 +40,47 @@
     <div class="routine-white-background">
         <div class="profile-routine">
             <h1>Todays Workout:</h1>
-            <span>
-                {{theUser.routine}}
-            </span>
+            
+<div class="each-routine">
+    {{#each listOfRoutines}}
+
+        <div class="routine">
+
+            <div class="workout">
+                <span id="workout">Workout: </span><span id="workout-text">{{this.Workout}}<a href="/routines/{{this._id}}/edit/"<i class="fa fa-edit"></i></a></span>
+            </div>
+
+            <div class="weight">
+                <span id="weight">Sets: </span><span id="weight-text">{{this.Weight}}</span>
+            </div>
+
+            <div class="sets">
+                <span id="sets">Reps: </span><span id="sets-text">{{this.Sets}}</span>
+            </div>
+
+            <div class="reps">
+                <span id="reps">Reps: </span><span id="reps-text">{{this.Reps}}</span>
+            </div>
+
+            <div class="details">
+                <span id="details">Details: </span><span id="details-text">{{this.Details}}</span>
+            </div>
+            
+        </div>
+
+    {{/each}}
+</div>   
         </div>
     </div>
+
+
+
+
+        <button class="routine-btn"><a href="/myroutine">ADD WORKOUT</a></button>
+        <form action="/routines/delete" method="post">
+            <button class="finished-btn">COMPLETED</button>
+        </form>
+    
 
 
 

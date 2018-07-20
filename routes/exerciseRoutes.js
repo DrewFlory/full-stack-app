@@ -50,9 +50,9 @@ exerciseRouter.get('/exercises/chest', ensureLogin.ensureLoggedIn('/'), (req, re
         'category': {$eq: ['Chest']}
     })
     
-    .then((chestExercises)=>{
-        console.log(chestExercises);
-        res.render('userViews/exercisesPage', {chestExercises});
+    .then((listOfExercises)=>{
+       
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -63,8 +63,8 @@ exerciseRouter.get('/exercises/back', ensureLogin.ensureLoggedIn('/'), (req, res
     Exercise.find({
         'category': {$eq: ['Back']}
     })
-    .then((backExercises)=>{
-        res.render('userViews/exerciseDetails', {backExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -75,8 +75,8 @@ exerciseRouter.get('/exercises/arms', ensureLogin.ensureLoggedIn('/'), (req, res
     Exercise.find({
         'category': {$eq: ['Arms']}
     })
-    .then((armExercises)=>{
-        res.render('userViews/exerciseDetails', {armExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -87,8 +87,8 @@ exerciseRouter.get('/exercises/legs', ensureLogin.ensureLoggedIn('/'), (req, res
     Exercise.find({
         'category': {$eq: ['Legs']}
     })
-    .then((legExercises)=>{
-        res.render('userViews/exerciseDetails', {legExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -99,8 +99,8 @@ exerciseRouter.get('/exercises/traps', ensureLogin.ensureLoggedIn('/'), (req, re
     Exercise.find({
         'category': {$eq: ['Traps']}
     })
-    .then((trapExercises)=>{
-        res.render('userViews/exerciseDetails', {trapExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -109,10 +109,10 @@ exerciseRouter.get('/exercises/traps', ensureLogin.ensureLoggedIn('/'), (req, re
 
 exerciseRouter.get('/exercises/shoulder', ensureLogin.ensureLoggedIn('/'), (req, res, next)=>{
     Exercise.find({
-        'category': {$eq: ['Shoulder']}
+        'category': {$eq: ['Shoulders']}
     })
-    .then((shoulderExercises)=>{
-        res.render('userViews/exerciseDetails', {shoulderExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);
@@ -123,8 +123,8 @@ exerciseRouter.get('/exercises/abs', ensureLogin.ensureLoggedIn('/'), (req, res,
     Exercise.find({
         'category': {$eq: ['Abs']}
     })
-    .then((abExercises)=>{
-        res.render('userViews/exerciseDetails', {abExercises});
+    .then((listOfExercises)=>{
+        res.render('userViews/exercisesPage', {listOfExercises});
     })
     .catch((err)=>{
         next(err);

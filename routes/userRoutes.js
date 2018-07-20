@@ -2,6 +2,7 @@ const express     = require('express');
 const userRouter  = express.Router();
 const User        = require('../models/userModel');
 const Quote        = require('../models/quoteModel');
+const Routine         = require('../models/routineModel');
 const bcrypt      = require('bcryptjs');
 const ensureLogin = require('connect-ensure-login');
 const passport    = require('passport');
@@ -10,20 +11,20 @@ const uploadCloud = require('../config/cloudinary');
 
 
 userRouter.get('/mypage', (req, res, next)=>{
+    Routine.find({Userid: req.user.id})
+    .then((listOfRoutines)=>{
+        console.log(listOfRoutines)
     // Get the count of all users
     Quote.count().exec(function (err, count) {
 
-        
     var random = Math.floor(Math.random() * count)
    
-
     Quote.findOne().skip(random).exec(
       function (err, result) {
-
-        console.log(result)
-        res.render('userViews/profilePage', {theUser: req.user, result: result.quote})
+        res.render('userViews/profilePage', {theUser: req.user, result: result.quote, listOfRoutines: listOfRoutines})
       })
    })
+})
 })
 
 userRouter.get('/users/signup',  (req, res, next)=>{
