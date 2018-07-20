@@ -408,7 +408,9 @@ a.previous {
   flex-wrap: wrap;
   margin-top: 7rem;
   margin-left: 8rem;
-  margin-right: 3rem; }
+  margin-right: 3rem;
+  overflow: scroll;
+  height: 700px; }
 
 .exercises img {
   height: 10rem;
