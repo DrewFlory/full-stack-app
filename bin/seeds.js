@@ -519,6 +519,33 @@ const exercises = [
     image1:'/images/exercises/landmine1.jpg',
     image2:'/images/exercises/landmine2.jpg',
 },
+{
+    name:'Cable Crossover',
+    category:'Chest',
+    muscle:'Chest',
+    equipment:'Cable',
+    description:'To move into the starting position, place the pulleys at the low position, select the resistance to be used and grasp a handle in each hand. Step forward, gaining tension in the pulleys. Your palms should be facing forward, hands below the waist, and your arms straight. With a slight bend in your arms, draw your hands upward and toward the midline of your body. Your hands should come together in front of your chest, palms facing up.',
+    image1:'/images/exercises/low-chest1.jpg',
+    image2:'/images/exercises/low-chest2.jpg',
+},
+{
+    name:'Wide Grip Bench',
+    category:'Chest',
+    muscle:'Chest',
+    equipment:'Barbell',
+    description:'Lie back on a flat bench with feet firm on the floor. Using a wide, pronated (palms forward) grip that is around 3 inches away from shoulder width (for each hand), lift the bar from the rack and hold it straight over you with your arms locked. As you breathe in, come down slowly until you feel the bar on your middle chest.  bring the bar back to the starting position as you breathe out and push the bar using your chest muscles. Lock your arms and squeeze your chest in the contracted position, hold for a second and then start coming down slowly again.',
+    image1:'/images/exercises/wide-bench1.jpg',
+    image2:'/images/exercises/wide-bench2.jpg',
+},
+{
+    name:'One-Arm Low Rows',
+    category:'Back',
+    muscle:'Back',
+    equipment:'Barbell',
+    description:'Position a bar into a landmine or in a corner to keep it from moving. Stand next to the bar, and take a grip with one hand close to the collar. Using your hips and legs. Assume a bent-knee stance with your hips back and your chest up. Your arm should be extended. Pull the weight to your side by retracting the shoulder and flexing the elbow.',
+    image1:'/images/exercises/low-back1.jpg',
+    image2:'/images/exercises/low-back2.jpg',
+},
 
 
 ]
