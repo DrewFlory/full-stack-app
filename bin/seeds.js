@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const Exercise = require('../models/exerciseModel');
 // const Quote = require('../models/quoteModel');
 
-const dbName = 'starter-code';
-mongoose.connect(`mongodb://localhost/${dbName}`);
+// const dbName = 'starter-code';
+mongoose.connect(process.env.MONGODB_URI);
 
 const exercises = [
 {
@@ -531,161 +531,162 @@ Exercise.create(exercises)
     console.log(err)
 })
 
-// const quotes = [
-//     {
-//         quote: '“ Of course it’s hard. It’s supposed to be hard. It it were easy, everybody would do it. Hard is what makes it great. ”'
-//     },
-//     {
-//         quote: '“ No pain, no gain. Shut up and train. ”'
-//     },
-//     {
-//         quote: '“ Your body can stand almost anything. It’s your mind that you have to convince. ”'
-//     },
-//     {
-//         quote: '“ Success isn’t always about greatness. It’s about consistency. Consistent hard work gains success. Greatness will come. ”'
-//     },
-//     {
-//         quote: '“ Train insane or remain the same. ”'
-//     },
-//     {
-//         quote: '“ Definition of a really good workout: when you hate doing it, but you love finishing it. ”'
-//     },
-//     {
-//         quote: '“ Push yourself because no one else is going to do it for you. ”'
-//     },
-//     {
-//         quote: '“ Suck it up. And one day you won’t have to suck it in. ”'
-//     },
-//     {
-//         quote: '“ Success starts with self-discipline. ”'
-//     },
-//     {
-//         quote: '“ Good things come to those who sweat. ”'
-//     },
-//     {
-//         quote: '“ Motivation is what gets you started. Habit is what keeps you going. ”'
-//     },
-//     {
-//         quote: '“ A one hour workout is 4% of your day. No excuses. ”'
-//     },
-//     {
-//         quote: '“ The body achieves what the mind believes. ”'
-//     },
-//     {
-//         quote: '“ What seems impossible today will one day become your warm-up. ”'
-//     },
-//     {
-//         quote: '“ Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway. ”'
-//     },
-//     {
-//         quote: '“ Someone busier than you is working out right now. ”'
-//     },
-//     {
-//         quote: '“ Hustle for that muscle. ”'
-//     },
-//     {
-//         quote: '“ Work hard in silence. Let success be your noise. ”'
-//     },
-//     {
-//         quote: '“ The hardest lift of all is lifting your butt off the couch. ”'
-//     },
-//     {
-//         quote: '“ If you still look good at the end of your workout, you didn’t train hard enough. ”'
-//     },
-//     {
-//         quote: '“ When you feel like quitting think about why you started. ”'
-//     },
-//     {
-//         quote: '“ A good workout is when you make your dry fit shirt look like false advertising. ”'
-//     },
-//     {
-//         quote: '“ I don’t count my sit-ups. I only start counting when it starts hurting because they’re the only ones that count. ”'
-//     },
-//     {
-//         quote: '“ It comes down to one simple thing: how bad do you want it? ”'
-//     },
-//     {
-//         quote: '“ Making excuses burns zero calories per hour. ”'
-//     },
-//     {
-//         quote: '“ Obstacles can’t stop you. Problems can’t stop you. People can’t stop you. Only you can stop you. ”'
-//     },
-//     {
-//         quote: '“ Making excuses burns zero calories per hour. ”'
-//     },
-//     {
-//         quote: '“ The only bad workout is the one that didn’t happen. ”'
-//     },
-//     {
-//         quote: '“ Exercise is like telling your body “ you’re gonna hate me for this, but you’ll thank me later. ”'
-//     },
-//     {
-//         quote: '“ The pain you feel today, will be the strength you feel tomorrow. ”'
-//     },
-//     {
-//         quote: '“ Don’t limit your challenges, challenge your limits. ”'
-//     },
-//     {
-//         quote: '“ It’s actually pretty simple. Either you do it, or you don’t. ”'
-//     },
-//     {
-//         quote: '“ Believe in yourself and all that you are. Know that there is something inside of you that is greater than any obstacle. ”'
-//     },
-//     {
-//         quote: '“ Nothing truly great ever came from a comfort zone. ”'
-//     },
-//     {
-//         quote: '“ You don’t have to be extreme, just consistent. ”'
-//     },
-//     {
-//         quote: '“ Less sugar, more fruit. Less soda, more water. Less driving, more walking. Less worry, more sleep. Less words, more action. ”'
-//     },
-//     {
-//         quote: '“ The difference between wanting and achieving is discipline. ”'
-//     },
-//     {
-//         quote: '“ The hard part isn’t getting your body in shape. The hard part is getting your mind in shape. ”'
-//     },
-//     {
-//         quote: '“ Remember, Rome wasn’t built in a day. Work hard, good results will come. ”'
-//     },
-//     {
-//         quote: '“ Sticks and stones may break my bones but squats will make me badass. ”'
-//     },
-//     {
-//         quote: '“ Wake up. Work out. Look hot. Kick ass. ”'
-//     },
-//     {
-//         quote: '“ Go the extra mile. It’s never crowded. ”'
-//     },
-//     {
-//         quote: '“ I may not be there yet, but I’m closer than I was yesterday. ”'
-//     },
-//     {
-//         quote: '“ Don’t wish for a good body, work for it. ”'
-//     },
-//     {
-//         quote: '“ Don’t be afraid of being a beginner. ”'
-//     },
-//     {
-//         quote: '“ First they will laugh. Then they will copy. Don’t give up. ”'
-//     },
-//     {
-//         quote: '“ Sweat is magic. Cover yourself in it daily to grant your wishes. ”'
-//     },
-//     {
-//         quote: '“ Sore. The most satisfying pain. ”'
-//     },
-//     {
-//         quote: '“ 70% of people that start a fitness plan quit. Except you. Not this time. ”'
-//     },
-// ]
+const quotes = [
+    {
+        quote: '“ Of course it’s hard. It’s supposed to be hard. It it were easy, everybody would do it. Hard is what makes it great. ”'
+    },
+    {
+        quote: '“ No pain, no gain. Shut up and train. ”'
+    },
+    {
+        quote: '“ Your body can stand almost anything. It’s your mind that you have to convince. ”'
+    },
+    {
+        quote: '“ Success isn’t always about greatness. It’s about consistency. Consistent hard work gains success. Greatness will come. ”'
+    },
+    {
+        quote: '“ Train insane or remain the same. ”'
+    },
+    {
+        quote: '“ Definition of a really good workout: when you hate doing it, but you love finishing it. ”'
+    },
+    {
+        quote: '“ Push yourself because no one else is going to do it for you. ”'
+    },
+    {
+        quote: '“ Suck it up. And one day you won’t have to suck it in. ”'
+    },
+    {
+        quote: '“ Success starts with self-discipline. ”'
+    },
+    {
+        quote: '“ Good things come to those who sweat. ”'
+    },
+    {
+        quote: '“ Motivation is what gets you started. Habit is what keeps you going. ”'
+    },
+    {
+        quote: '“ A one hour workout is 4% of your day. No excuses. ”'
+    },
+    {
+        quote: '“ The body achieves what the mind believes. ”'
+    },
+    {
+        quote: '“ What seems impossible today will one day become your warm-up. ”'
+    },
+    {
+        quote: '“ Never give up on a dream just because of the time it will take to accomplish it. The time will pass anyway. ”'
+    },
+    {
+        quote: '“ Someone busier than you is working out right now. ”'
+    },
+    {
+        quote: '“ Hustle for that muscle. ”'
+    },
+    {
+        quote: '“ Work hard in silence. Let success be your noise. ”'
+    },
+    {
+        quote: '“ The hardest lift of all is lifting your butt off the couch. ”'
+    },
+    {
+        quote: '“ If you still look good at the end of your workout, you didn’t train hard enough. ”'
+    },
+    {
+        quote: '“ When you feel like quitting think about why you started. ”'
+    },
+    {
+        quote: '“ A good workout is when you make your dry fit shirt look like false advertising. ”'
+    },
+    {
+        quote: '“ I don’t count my sit-ups. I only start counting when it starts hurting because they’re the only ones that count. ”'
+    },
+    {
+        quote: '“ It comes down to one simple thing: how bad do you want it? ”'
+    },
+    {
+        quote: '“ Making excuses burns zero calories per hour. ”'
+    },
+    {
+        quote: '“ Obstacles can’t stop you. Problems can’t stop you. People can’t stop you. Only you can stop you. ”'
+    },
+    {
+        quote: '“ Making excuses burns zero calories per hour. ”'
+    },
+    {
+        quote: '“ The only bad workout is the one that didn’t happen. ”'
+    },
+    {
+        quote: '“ Exercise is like telling your body “ you’re gonna hate me for this, but you’ll thank me later. ”'
+    },
+    {
+        quote: '“ The pain you feel today, will be the strength you feel tomorrow. ”'
+    },
+    {
+        quote: '“ Don’t limit your challenges, challenge your limits. ”'
+    },
+    {
+        quote: '“ It’s actually pretty simple. Either you do it, or you don’t. ”'
+    },
+    {
+        quote: '“ Believe in yourself and all that you are. Know that there is something inside of you that is greater than any obstacle. ”'
+    },
+    {
+        quote: '“ Nothing truly great ever came from a comfort zone. ”'
+    },
+    {
+        quote: '“ You don’t have to be extreme, just consistent. ”'
+    },
+    {
+        quote: '“ Less sugar, more fruit. Less soda, more water. Less driving, more walking. Less worry, more sleep. Less words, more action. ”'
+    },
+    {
+        quote: '“ The difference between wanting and achieving is discipline. ”'
+    },
+    {
+        quote: '“ The hard part isn’t getting your body in shape. The hard part is getting your mind in shape. ”'
+    },
+    {
+        quote: '“ Remember, Rome wasn’t built in a day. Work hard, good results will come. ”'
+    },
+    {
+        quote: '“ Sticks and stones may break my bones but squats will make me badass. ”'
+    },
+    {
+        quote: '“ Wake up. Work out. Look hot. Kick ass. ”'
+    },
+    {
+        quote: '“ Go the extra mile. It’s never crowded. ”'
+    },
+    {
+        quote: '“ I may not be there yet, but I’m closer than I was yesterday. ”'
+    },
+    {
+        quote: '“ Don’t wish for a good body, work for it. ”'
+    },
+    {
+        quote: '“ Don’t be afraid of being a beginner. ”'
+    },
+    {
+        quote: '“ First they will laugh. Then they will copy. Don’t give up. ”'
+    },
+    {
+        quote: '“ Sweat is magic. Cover yourself in it daily to grant your wishes. ”'
+    },
+    {
+        quote: '“ Sore. The most satisfying pain. ”'
+    },
+    {
+        quote: '“ 70% of people that start a fitness plan quit. Except you. Not this time. ”'
+    },
+]
 
 
-// Quote.create(quotes)
-// .then((response)=>{
-//     console.log(`created ${response.length} quotes`)
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+Quote.create(quotes)
+.then((response)=>{
+    Exercise.create(exercises)
+    console.log(`created ${response.length} quotes`)
+})
+.catch((err)=>{
+    console.log(err)
+})
